@@ -1,3 +1,4 @@
+// Bootstraping is Platform Specific
 (function (app) {
 	document.addEventListener('DOMContentLoaded', function() {
 		ng.platformBrowserDynamic

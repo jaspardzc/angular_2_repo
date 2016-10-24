@@ -1,3 +1,7 @@
+/*
+* See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
+* for the full set of master styles used by the documentation samples
+*/
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,7 +11,12 @@ body {
   margin: 2em;
 }
 
- /*
-  * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
-  * for the full set of master styles used by the documentation samples
-  */
+
+/* Form Component Style */
+.ng-valid[required] {
+	border-left:  5px solid #42A948;
+}
+
+.ng-invalid {
+	border-left:  5px solid #a94442;
+}

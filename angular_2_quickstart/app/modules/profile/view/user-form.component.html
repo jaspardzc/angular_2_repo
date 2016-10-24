@@ -1,0 +1,78 @@
+<div class="container">
+	<div [hidden]="submitted">
+		<h1>User Form Sample</h1>
+		<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+			{{diagnostic()}}
+			<div class="form-group">
+				<label for="firstname">Firstname: </label>
+				<input type="text" class="form-control" required 
+						[(ngModel)]="currentUser.firstname"
+						name="firstname" #firstname="ngModel">
+				<div [hidden]="firstname.valid" class="alert alert-danger">Firstname is required</div>
+			</div>
+
+			<div class="form-group">
+				<label for="lastname">Lastname: </label>
+				<input type="text" class="form-control" required
+						[(ngModel)]="currentUser.lastname"
+						name="lastname" #lastname="ngModel">
+				<div [hidden]="lastname.valid" class="alert alert-danger">Lastname is required</div>
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email: </label>
+				<input type="email" class="form-control" required
+						[(ngModel)]="currentUser.email"
+						name="email" #email="ngModel">
+				<div [hidden]="email.valid" class="alert alert-danger">Email is required</div>
+			</div>		
+
+			<div class="form-group">
+				<label for="gender">Gender: </label>
+				<select class="form-control" required
+					[(ngModel)]="currentUser.gender" name="gender" #gender="ngModel">
+					<option *ngFor="let g of genders" [value]="g">{{g}}</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="degree">Degree: </label>
+				<select class="form-control" required
+					[(ngModel)]="currentUser.degree" name="degree" #degree="ngModel">
+					<option *ngFor="let d of degrees" [value]="d">{{d}}</option>
+				</select>
+			</div>
+
+			<button type="submit" class="btn btn-default"
+					[disabled]="!userForm.form.valid">Submit</button>
+		</form>
+	</div>
+
+	<div [hidden]="!submitted">
+		<h2>You have submitted the following information: </h2>
+		<div class="row">
+			<div class="col-xs-3">FirstName: </div>
+			<div class="col-xs-9 pull-left">{{ currentUser.firstname}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">Lastname: </div>
+			<div class="col-xs-9 pull-left">{{ currentUser.lastname}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">Email: </div>
+			<div class="col-xs-9 pull-left">{{ currentUser.email}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">Gender: </div>
+			<div class="col-xs-9 pull-left">{{ currentUser.gender}}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3">Degree: </div>
+			<div class="col-xs-9 pull-left">{{ currentUser.degree}}</div>
+		</div>
+		<br/>
+		<button class="btn btn-default" (click)="submitted=false">Edit</button>
+	</div>
+
+
+</div>	

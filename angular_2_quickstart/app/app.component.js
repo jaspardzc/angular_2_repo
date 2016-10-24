@@ -5,7 +5,7 @@
 		.Component({
 			// CSS selector for a HTML element named 'my-app'
 			selector: 'my-app',
-			template: '<h1>Angular 2 Web App Quickstart</h1>'
+			template: '<user-form></user-form>'
 		})
 		// implementation of this component, methods will be binded to the view
 		.Class({

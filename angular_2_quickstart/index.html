@@ -4,21 +4,26 @@
 	<title>AngularJS 2 Quickstart</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="styles/main.css">
-
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<!-- Loading Libraries -->
+	<!-- polyfills for IE -->
 	<script src="node_modules/core-js/client/shim.min.js"></script>
-
+	
+	<!-- polyfills for Angular, zone.js and Reflect.js, followed by the Reactive Extensions RxJS library.-->
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
-
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    
     <script src="node_modules/@angular/core/bundles/core.umd.js"></script>
     <script src="node_modules/@angular/common/bundles/common.umd.js"></script>
     <script src="node_modules/@angular/compiler/bundles/compiler.umd.js"></script>
+    <script src="node_modules/@angular/forms/bundles/forms.umd.js"></script>
     <script src="node_modules/@angular/platform-browser/bundles/platform-browser.umd.js"></script>
     <script src="node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"></script>
 
     <!-- Loading Modules -->
+    <script src="app/modules/profile/domain/user.js"></script>
+    <script src="app/modules/profile/controller/user-form.component.js"></script>
     <script src="app/app.component.js"></script>
     <script src="app/app.module.js"></script>
     <script src="app/main.js"></script>
