@@ -8,14 +8,14 @@ Gulp is a build system that can improve how you develop websites by automating c
 
 # gulp-seed
 - install all the dependencies
-'npm install'
+    npm install
 - run the gulp-seed
-'gulp'
+    gulp
 
 # angular_2_quickstart
 - install all the dependencies
-'npm install'
+    npm install
 - run the angular_2_quickstart
-'npm start'
+    npm start
 
 
